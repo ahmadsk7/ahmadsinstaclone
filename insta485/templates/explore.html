@@ -1,0 +1,31 @@
+{% extends "base.html" %} {%block mainsection%}
+
+<h1 class="title">Discover People</h1>
+
+{% for user in users.not_following %}
+
+<div class="card">
+  <div class="card-information">
+    <div class="card-grouping">
+      <img
+        class="card-avatar"
+        src="{{url_for('uploads', filename=user.filename)}}"
+        alt="User Avatar Image"
+      />
+      <a href="/users/{{user.username}}/">{{user.username}}</a>
+    </div>
+  </div>
+  <div>
+    <form
+      action="{{url_for('update_following', target=request.url)}}"
+      method="post"
+      enctype="multipart/form-data"
+    >
+      <input type="submit" name="follow" value="follow" />
+      <input type="hidden" name="username" value="{{user.username}}" />
+      <input type="hidden" name="operation" value="follow" />
+    </form>
+  </div>
+</div>
+
+{%endfor%} {%endblock%}

@@ -1,0 +1,324 @@
+.inter-<uniquifier > {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+* {
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.header {
+  position: fixed;
+  background-color: white;
+  height: 60px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid black;
+  border-left-radius: 4px;
+  border-right-radius: 4px;
+  padding: 10px;
+}
+
+.header-ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.header-li {
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  list-style-type: none;
+  color: black;
+  padding: 10px;
+  margin: 10px;
+}
+
+.header-li:visited {
+  color: black;
+}
+.header-li a {
+  text-decoration: none;
+  color: black;
+}
+.header-logo {
+  height: 5%;
+  width: 5%;
+  object-fit: cover;
+  align-items: center;
+  justify-content: center;
+}
+.main-section {
+  padding: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/* Post */
+.post {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: solid 1px black;
+  border-radius: 10px;
+  margin: 20px;
+}
+.post-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+  border-bottom: 1px solid black;
+}
+.post-header-user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.post-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  object-fit: cover;
+}
+.post-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.post-image img {
+  width: 600px;
+  height: 600px;
+  object-fit: cover;
+}
+.post-description {
+  padding: 10px;
+  padding-top: 5px;
+  border-top: 1px solid black;
+}
+.post-description-likes {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding-bottom: 10px;
+}
+.post-description-like {
+  display: flex;
+  gap: 10px;
+}
+.post-description-comments {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.post-description-comment {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  row-gap: 10px;
+}
+.post-description-comment p {
+  margin-left: 10px;
+}
+.post-description-comment-info {
+  display: flex;
+  gap: 10px;
+}
+.post-description-comment-delete {
+  display: flex;
+  flex-direction: column;
+}
+/* User */
+.user-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 10px;
+  border: 1px solid black;
+  border-radius: 20px;
+  height: 100%;
+  padding: 20px;
+}
+.user-information {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.user-specs {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.user-follow-status {
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 5px;
+}
+.user-options {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.user-stats {
+  display: flex;
+  gap: 10px;
+}
+.user-name {
+}
+.user-upload {
+  border: 1px solid black;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.user-posts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+.user-post {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+
+/* Single Posts */
+.single-post {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid black;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.single-post-image img {
+  object-fit: cover;
+  width: 600px;
+  height: 600px;
+  padding-right: 4px;
+  border-right: 1px solid black;
+}
+.single-post-description {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  width: 500px;
+}
+.single-post-information {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid black;
+}
+.single-post-information-user {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.single-post-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  object-fit: cover;
+}
+.single-post-likes {
+  font-weight: bold;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.single-post-comments {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.single-post-comment {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+/* Following/Followers */
+.title {
+  padding: 20px;
+}
+.card {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 15px;
+  min-width: 40%;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.card-information {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-around;
+  padding-right: 20px;
+}
+.card-grouping {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-grouping img {
+  margin-right: 10px;
+}
+.card-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  object-fit: cover;
+}
+.card-status {
+  font-weight: bold;
+}
+
+.login-page {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  gap: 10px;
+}
+.login-page input {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.login-sign-up {
+  display: flex;
+  flex-direction: row;
+}
+.edit-page {
+  display: flex;
+  flex-direction: column;
+}
+.edit-page form {
+  display: flex;
+  flex-direction: column;
+}
+.edit-info img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}

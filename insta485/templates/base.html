@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="/static/css/style.css" />
+    <title>insta485</title>
+  </head>
+  <body>
+    <!-- Nav bar -->
+    <header class="header">
+      <ul class="header-ul">
+        <li class="header-li">
+          <a href="/"
+            ><img
+              class="header-logo"
+              src="/static/images/logo.png"
+              alt="Instagram Logo"
+          /></a>
+        </li>
+        <!-- TODO: IMPLEMENT LOGIN AND REDIRECT ONLY IF -->
+
+        <li class="header-li">
+          <a href="/explore/"> explore </a>
+        </li>
+        <li class="header-li">
+          {% if logname %}
+          <a href="/users/{{ logname }}/">{{ logname }}</a>
+          {% else %}
+          <a href="{{ url_for('login') }}">Login</a>
+          {% endif %}
+        </li>
+        <!-- TODO: IMPLEMENT LOGIN AND REDIRECT ONLY IF -->
+      </ul>
+    </header>
+    <div class="main-section">{% block mainsection %}{% endblock %}</div>
+  </body>
+</html>

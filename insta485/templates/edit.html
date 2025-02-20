@@ -1,0 +1,31 @@
+{% extends "base.html" %} {%block mainsection%}
+<div class="main-section">
+  <div class="edit-page">
+    <!-- DO NOT CHANGE THIS (aside from where we say 'FIXME') -->
+    <div class="edit-info">
+      <img src="{{url_for('uploads', filename=filename)}}" alt="User Avatar" />
+      <p>{{username}}</p>
+    </div>
+    <form
+      action="{{url_for('update_accounts', target=url_for('edit'))}}"
+      method="post"
+      enctype="multipart/form-data"
+    >
+      <label>Photo</label>
+      <input type="file" name="file" accept="image/*" />
+      <label>Name</label>
+      <input type="text" name="fullname" value="{{fullname}}" required />
+      <label>Email</label>
+      <input type="text" name="email" value="{{email}}" required />
+      <input type="submit" name="update" value="submit" />
+      <input type="hidden" name="operation" value="edit_account" />
+    </form>
+    <div class="password-group">
+      <a href="/accounts/password/">Change password</a>
+    </div>
+    <div class="delete-group">
+      <a href="/accounts/delete/">Delete account</a>
+    </div>
+  </div>
+</div>
+{%endblock%}
