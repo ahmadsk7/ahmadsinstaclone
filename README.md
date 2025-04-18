@@ -1,4 +1,4 @@
-# EECS 485 Project 3
+# Ahmad's Instagram Clone 
 
 ## Quick start
 
